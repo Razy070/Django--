@@ -1,9 +1,78 @@
-<mxfile host="app.diagrams.net" modified="2023-05-01T11:17:45.501Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 YaBrowser/23.3.3.719 Yowser/2.5 Safari/537.36" version="21.2.3" etag="2qAyzhfvYT1Cn072ptvg" type="github">
+<mxfile host="app.diagrams.net" modified="2023-05-01T11:39:53.610Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 YaBrowser/23.3.3.719 Yowser/2.5 Safari/537.36" etag="KyYWBANcEqXpYYBI-p5p" version="21.2.3" type="github">
   <diagram name="Страница 1" id="RuO6ACYC4KuS9qVF-Qz8">
-    <mxGraphModel>
+    <mxGraphModel dx="1386" dy="791" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="ddsNMUGAuFDbOprlZwaj-1" value="URL PATTERNS&lt;br&gt;path(&#39;blog/&amp;lt;id&amp;gt;/&#39;, post_detail.view)" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="200" y="130" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="ddsNMUGAuFDbOprlZwaj-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="ddsNMUGAuFDbOprlZwaj-1" target="ddsNMUGAuFDbOprlZwaj-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ddsNMUGAuFDbOprlZwaj-3" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="299.5" y="330" as="sourcePoint" />
+            <mxPoint x="299.5" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ddsNMUGAuFDbOprlZwaj-4" value="VIEWS&lt;br&gt;def post_detail(request, id):&lt;br&gt;post = Post.object.get(id=id)&lt;br&gt;...&lt;br&gt;return render(request,&lt;br&gt;&#39;post/detail.html,&lt;br&gt;{&#39;&#39;post&#39;: post})" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="200" y="430" width="225" height="225" as="geometry" />
+        </mxCell>
+        <mxCell id="ddsNMUGAuFDbOprlZwaj-7" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="425" y="550" as="sourcePoint" />
+            <mxPoint x="525" y="550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ddsNMUGAuFDbOprlZwaj-9" value="MODEL&lt;br&gt;class Post(models.Model):&lt;br&gt;title = models.TextField(&#39;&#39;Описание&#39;, max_length=111111)&lt;br&gt;def&amp;nbsp; __str__(self):&lt;br&gt;return self.title" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="530" y="490" width="230" height="145" as="geometry" />
+        </mxCell>
+        <mxCell id="ddsNMUGAuFDbOprlZwaj-10" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="520" y="600" as="sourcePoint" />
+            <mxPoint x="430" y="600" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="430" y="600" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ddsNMUGAuFDbOprlZwaj-11" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="560" y="710" as="sourcePoint" />
+            <mxPoint x="560" y="710" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="450" y="650" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ddsNMUGAuFDbOprlZwaj-12" value="TEMPLATE&lt;br&gt;&amp;lt;html&amp;gt;&lt;br&gt;&amp;lt;body&amp;gt;&lt;br&gt;&amp;lt;h1&amp;gt;{{ post.title }}&amp;lt;/h1&amp;gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="580" y="700" width="200" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="ddsNMUGAuFDbOprlZwaj-16" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="298.75" y="655" as="sourcePoint" />
+            <mxPoint x="299" y="750" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ddsNMUGAuFDbOprlZwaj-17" value="https::/127.0.0.1:8000/blog/33" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="760" width="200" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="ddsNMUGAuFDbOprlZwaj-18" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="550" y="790" as="sourcePoint" />
+            <mxPoint x="430" y="790" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ddsNMUGAuFDbOprlZwaj-19" value="BROWSER&lt;br&gt;&#39;title&#39;&lt;br&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="10" y="600" width="140" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="ddsNMUGAuFDbOprlZwaj-20" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="190" y="780" as="sourcePoint" />
+            <mxPoint x="140" y="750" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
